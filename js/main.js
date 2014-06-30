@@ -26,8 +26,9 @@ require.config({
 
 require([
 	'backbone',
-	'app/app'
-], function(Backbone, App) {
+	'app/app',
+	'bootstrap',
+], function(Backbone, App, bootstrap) {
 	'use strict';
 	
 	App.initialize();
