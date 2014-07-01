@@ -10,22 +10,26 @@ define([
 	var AppView = Backbone.View.extend({
 		id: 'app-view',
 		html: [
-			'<div class="navbar">',
+			'<div class="navbar-default clearfix">',
 				'<a class="navbar-brand" href="#">Weather App</a>',
 				'<ul class="nav navbar-nav">',
 					'<li id="nav-dash"><a href="#dash">Dashboard</a></li>',
 					'<li id="nav-about"><a href="#about">About</a></li>',
 				'</ul>',
+                '<p class="navbar-text pull-right"></p>',
 			'</div>',
-			'<div id="content"></div>'
+			'<div id="content" class="clearfix"></div>'
 		].join(''),
 		events: {},
 		views: {},
 		initialize: function() {
+            this.listenTo(this.model, 'change', this.render);
+
 			this.views['about'] = new AboutView({
 				id: 'page-about',
 				className: 'page-view'
 			});
+
 			this.views['dash'] = new DashView({
 				id: 'page-dash',
 				className: 'page-view'
@@ -37,6 +41,12 @@ define([
 				.append(this.views['dash'].render().el)
 				.append(this.views['about'].render().el);
 		},
+        render: function() {
+            this.$el.css('background-color', this.model.get('backgroundColor'));
+            this.$('.navbar-text').html(this.model.get('welcomeMessage'));
+
+            return this;
+        },
 		setPage: function(page) {
 			this.$('.nav li').removeClass('active');
 			this.$('#nav-' + page).addClass('active');

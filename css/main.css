@@ -1,11 +1,36 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
-
 
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+    padding: 20px;
+}
 
+/* App View */
+#app-view {
+    padding-top: 10px;
+}
+
+/* Header */
+#header {
+    margin: 0 10px 10px 10px;
+}
+
+/* Page Views */
+.page-view > h3 {
+    margin-left: 20px;
+}
+
+/* Places List */
+#places-list {
+    padding: 20px;
+}
+#places-list .panel {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+}
 
 
 /* ==========================================================================
