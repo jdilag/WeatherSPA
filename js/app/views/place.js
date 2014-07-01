@@ -15,7 +15,7 @@ define([
 
             this.collection.url = [
                 'http://api.wunderground.com/api/',
-                '', //place personal key here
+                '6968a6a83b1ac581', //place personal key here
                 '/forecast/q/',
                 this.model.get('countryCode'),
                 '/',
