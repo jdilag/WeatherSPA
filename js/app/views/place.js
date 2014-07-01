@@ -10,6 +10,10 @@ define([
     var PlaceView = Backbone.View.extend({
         template  : Templates['place'],
         collection: new DaysCollection([]),
+        events: {
+            'click #btn-remove': 'removePlace',
+            'click #btn-expand': 'openDetail'
+        },
         render    : function() {
             var self = this;
 
@@ -47,6 +51,12 @@ define([
             var html = this.template(this.model.toJSON());
             this.$el.html(html);
             this.$bodyEl = this.$('.panel-body');
+        },
+        removePlace: function() {
+            this.model.destroy();
+        },
+        openDetail: function() {
+            this.$('.panel').toggleClass('detail');
         }
     });
 

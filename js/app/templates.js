@@ -8,6 +8,8 @@ define([
     Templates['place'] = [
         '<div class="panel panel-info">',
             '<div class="panel-heading">',
+                '<button id="btn-expand" type="button" class="close" aria-hidden="true">+</button>',
+                '<button id="btn-remove" type="button" class="close" aria-hidden="true">&times;</button>',
                 '<h3 class="panel-title">',
                     '<%= name %> - <%= countryCode %>',
                 '</h3>',

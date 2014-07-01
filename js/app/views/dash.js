@@ -67,7 +67,7 @@ define([
             this.$placesList  = this.$('#places-list');
             this.$dashButtons = this.$('#dash-buttons');
             this.collection   = new PlacesCollection([]);
-            this.listenTo(this.collection, 'change', this.render);
+            this.listenTo(this.collection, 'change destroy', this.render);
             this.collection.fetch();
 
             window.debug = {

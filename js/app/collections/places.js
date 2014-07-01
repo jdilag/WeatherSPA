@@ -1,6 +1,7 @@
 define([
     'app/models/place',
-    'backbone'
+    'backbone',
+    'backbone.localStorage'
 ], function(PlaceModel, Backbone) {
     'use strict';
 
