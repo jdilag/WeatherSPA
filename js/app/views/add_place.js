@@ -10,11 +10,11 @@ define([
         html: [
             '<form role="form">',
                 '<div class="form-group">',
-                    '<label fo="countryCodeInput">Country Code</label>',
+                    '<label for="countryCodeInput">Country Code</label>',
                     '<input type="text" class="form-control" id="countryCodeInput" placeholder="Enter Country Code">',
                 '</div>',
                 '<div class="form-group">',
-                    '<label fo="nameInput">Name</label>',
+                    '<label for="nameInput">Name</label>',
                     '<input type="text" class="form-control" id="nameInput" placeholder="Enter Name">',
                 '</div>',
                 '<button id="btn-add" class="btn btn-default">Submit</button>',
