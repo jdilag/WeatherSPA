@@ -2,13 +2,13 @@ define([
 ], function() {
 
 	var isNumber = function(n) {
-		return typeof n === 'number';		
+		return !isNaN(parseFloat(n)) && isFinite(n);		
 	}
 	
 	var celsiusToFahrenheit = function(celsius) {
 		if (!isNumber(celsius) || !celsius) return null;
 
-		return celsius * 1.8000 + 32.0;
+		return celsius * 9 / 5 + 32.0;
 	};
 
 	return {
